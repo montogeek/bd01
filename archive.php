@@ -1,95 +1,108 @@
-<?php
-/**
- * The template for displaying Archive pages.
- *
- * Learn more: http://codex.wordpress.org/Template_Hierarchy
- *
- * @package bd01
- * @since bd01 1.0
- */
+<?php get_header(); ?>
 
-get_header(); ?>
+			<div id="content">
 
-	<section id="primary" class="content-area">
-		<div id="content" class="site-content" role="main">
+				<div id="inner-content" class="wrap clearfix">
 
-		<?php if ( have_posts() ) : ?>
+				    <div id="main" class="eightcol first clearfix" role="main">
 
-			<header class="page-header">
-				<h1 class="page-title">
-					<?php
-						if ( is_category() ) {
-							printf( __( 'Category Archives: %s', 'bd01' ), '<span>' . single_cat_title( '', false ) . '</span>' );
+					    <?php if (is_category()) { ?>
+						    <h1 class="archive-title h2">
+							    <span><?php _e("Posts Categorized:", "bonestheme"); ?></span> <?php single_cat_title(); ?>
+					    	</h1>
 
-						} elseif ( is_tag() ) {
-							printf( __( 'Tag Archives: %s', 'bd01' ), '<span>' . single_tag_title( '', false ) . '</span>' );
+					    <?php } elseif (is_tag()) { ?>
+						    <h1 class="archive-title h2">
+							    <span><?php _e("Posts Tagged:", "bonestheme"); ?></span> <?php single_tag_title(); ?>
+						    </h1>
 
-						} elseif ( is_author() ) {
-							/* Queue the first post, that way we know
-							 * what author we're dealing with (if that is the case).
-							*/
-							the_post();
-							printf( __( 'Author Archives: %s', 'bd01' ), '<span class="vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( "ID" ) ) ) . '" title="' . esc_attr( get_the_author() ) . '" rel="me">' . get_the_author() . '</a></span>' );
-							/* Since we called the_post() above, we need to
-							 * rewind the loop back to the beginning that way
-							 * we can run the loop properly, in full.
-							 */
-							rewind_posts();
+					    <?php } elseif (is_author()) {
+					    	global $post;
+					    	$author_id = $post->post_author;
+					    ?>
+						    <h1 class="archive-title h2">
 
-						} elseif ( is_day() ) {
-							printf( __( 'Daily Archives: %s', 'bd01' ), '<span>' . get_the_date() . '</span>' );
+						    	<span><?php _e("Posts By:", "bonestheme"); ?></span> <?php the_author_meta('display_name', $author_id); ?>
 
-						} elseif ( is_month() ) {
-							printf( __( 'Monthly Archives: %s', 'bd01' ), '<span>' . get_the_date( 'F Y' ) . '</span>' );
+						    </h1>
+					    <?php } elseif (is_day()) { ?>
+						    <h1 class="archive-title h2">
+	    						<span><?php _e("Daily Archives:", "bonestheme"); ?></span> <?php the_time('l, F j, Y'); ?>
+						    </h1>
 
-						} elseif ( is_year() ) {
-							printf( __( 'Yearly Archives: %s', 'bd01' ), '<span>' . get_the_date( 'Y' ) . '</span>' );
+		    			<?php } elseif (is_month()) { ?>
+			    		    <h1 class="archive-title h2">
+				    	    	<span><?php _e("Monthly Archives:", "bonestheme"); ?></span> <?php the_time('F Y'); ?>
+					        </h1>
 
-						} else {
-							_e( 'Archives', 'bd01' );
+					    <?php } elseif (is_year()) { ?>
+					        <h1 class="archive-title h2">
+					    	    <span><?php _e("Yearly Archives:", "bonestheme"); ?></span> <?php the_time('Y'); ?>
+					        </h1>
+					    <?php } ?>
 
-						}
-					?>
-				</h1>
-				<?php
-					if ( is_category() ) {
-						// show an optional category description
-						$category_description = category_description();
-						if ( ! empty( $category_description ) )
-							echo apply_filters( 'category_archive_meta', '<div class="taxonomy-description">' . $category_description . '</div>' );
+					    <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-					} elseif ( is_tag() ) {
-						// show an optional tag description
-						$tag_description = tag_description();
-						if ( ! empty( $tag_description ) )
-							echo apply_filters( 'tag_archive_meta', '<div class="taxonomy-description">' . $tag_description . '</div>' );
-					}
-				?>
-			</header><!-- .page-header -->
+					    <article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?> role="article">
 
-			<?php /* Start the Loop */ ?>
-			<?php while ( have_posts() ) : the_post(); ?>
+						    <header class="article-header">
 
-				<?php
-					/* Include the Post-Format-specific template for the content.
-					 * If you want to overload this in a child theme then include a file
-					 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-					 */
-					get_template_part( 'content', get_post_format() );
-				?>
+							    <h3 class="h2"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
+                  <p class="byline vcard"><?php
+                    printf(__('Posted <time class="updated" datetime="%1$s" pubdate>%2$s</time> by <span class="author">%3$s</span> <span class="amp">&</span> filed under %4$s.', 'bonestheme'), get_the_time('Y-m-j'), get_the_time(__('F jS, Y', 'bonestheme')), bones_get_the_author_posts_link(), get_the_category_list(', '));
+                  ?></p>
 
-			<?php endwhile; ?>
+						    </header> <!-- end article header -->
 
-			<?php bd01_content_nav( 'nav-below' ); ?>
+						    <section class="entry-content clearfix">
 
-		<?php else : ?>
+							    <?php the_post_thumbnail( 'bones-thumb-300' ); ?>
 
-			<?php get_template_part( 'no-results', 'archive' ); ?>
+							    <?php the_excerpt(); ?>
 
-		<?php endif; ?>
+						    </section> <!-- end article section -->
 
-		</div><!-- #content -->
-	</section><!-- #primary -->
+						    <footer class="article-footer">
 
-<?php get_sidebar(); ?>
+						    </footer> <!-- end article footer -->
+
+					    </article> <!-- end article -->
+
+					    <?php endwhile; ?>
+
+					        <?php if (function_exists('bones_page_navi')) { ?>
+						        <?php bones_page_navi(); ?>
+					        <?php } else { ?>
+						        <nav class="wp-prev-next">
+							        <ul class="clearfix">
+								        <li class="prev-link"><?php next_posts_link(__('&laquo; Older Entries', "bonestheme")) ?></li>
+								        <li class="next-link"><?php previous_posts_link(__('Newer Entries &raquo;', "bonestheme")) ?></li>
+							        </ul>
+					    	    </nav>
+					        <?php } ?>
+
+					    <?php else : ?>
+
+    					    <article id="post-not-found" class="hentry clearfix">
+    						    <header class="article-header">
+    							    <h1><?php _e("Oops, Post Not Found!", "bonestheme"); ?></h1>
+    					    	</header>
+    						    <section class="entry-content">
+    							    <p><?php _e("Uh Oh. Something is missing. Try double checking things.", "bonestheme"); ?></p>
+        						</section>
+    	    					<footer class="article-footer">
+    		    				    <p><?php _e("This is the error message in the archive.php template.", "bonestheme"); ?></p>
+    			    			</footer>
+    				    	</article>
+
+					    <?php endif; ?>
+
+    				</div> <!-- end #main -->
+
+	    			<?php get_sidebar(); ?>
+
+                </div> <!-- end #inner-content -->
+
+			</div> <!-- end #content -->
+
 <?php get_footer(); ?>
