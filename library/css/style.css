@@ -647,9 +647,9 @@ BUTTONS
 *********************/
 .button,
 .button:visited {
-  border: 1px solid #be0d37;
-  border-top-color: #db0f3f;
-  border-left-color: #db0f3f;
+  border: 1px solid #942299;
+  border-top-color: #ac28b2;
+  border-left-color: #ac28b2;
   padding: 4px 12px;
   color: #ffffff;
   display: inline-block;
@@ -668,36 +668,36 @@ BUTTONS
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
-  background-color: #e40f42;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#f01d4f), to(#e40f42));
-  background-image: -webkit-linear-gradient(top, #f01d4f, #e40f42);
-  background-image: -moz-linear-gradient(top, #f01d4f, #e40f42);
-  background-image: -o-linear-gradient(top, #f01d4f, #e40f42);
-  background-image: linear-gradient(to bottom, #f01d4f, #e40f42);
+  background-color: #b429ba;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#c82ecf), to(#b429ba));
+  background-image: -webkit-linear-gradient(top, #c82ecf, #b429ba);
+  background-image: -moz-linear-gradient(top, #c82ecf, #b429ba);
+  background-image: -o-linear-gradient(top, #c82ecf, #b429ba);
+  background-image: linear-gradient(to bottom, #c82ecf, #b429ba);
 }
 .button:hover,
 .button:visited:hover,
 .button:focus,
 .button:visited:focus {
   color: #ffffff;
-  border: 1px solid #be0d37;
-  border-top-color: #9d0a2d;
-  border-left-color: #9d0a2d;
-  background-color: #cc0e3b;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#e40f42), to(#cc0e3b));
-  background-image: -webkit-linear-gradient(top, #e40f42, #cc0e3b);
-  background-image: -moz-linear-gradient(top, #e40f42, #cc0e3b);
-  background-image: -o-linear-gradient(top, #e40f42, #cc0e3b);
-  background-image: linear-gradient(to bottom, #e40f42, #cc0e3b);
+  border: 1px solid #942299;
+  border-top-color: #771b7c;
+  border-left-color: #771b7c;
+  background-color: #a025a5;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#b429ba), to(#a025a5));
+  background-image: -webkit-linear-gradient(top, #b429ba, #a025a5);
+  background-image: -moz-linear-gradient(top, #b429ba, #a025a5);
+  background-image: -o-linear-gradient(top, #b429ba, #a025a5);
+  background-image: linear-gradient(to bottom, #b429ba, #a025a5);
 }
 .button:active,
 .button:visited:active {
-  background-color: #f01d4f;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#e40f42), to(#f01d4f));
-  background-image: -webkit-linear-gradient(top, #e40f42, #f01d4f);
-  background-image: -moz-linear-gradient(top, #e40f42, #f01d4f);
-  background-image: -o-linear-gradient(top, #e40f42, #f01d4f);
-  background-image: linear-gradient(to bottom, #e40f42, #f01d4f);
+  background-color: #c82ecf;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#b429ba), to(#c82ecf));
+  background-image: -webkit-linear-gradient(top, #b429ba, #c82ecf);
+  background-image: -moz-linear-gradient(top, #b429ba, #c82ecf);
+  background-image: -o-linear-gradient(top, #b429ba, #c82ecf);
+  background-image: linear-gradient(to bottom, #b429ba, #c82ecf);
 }
 .blue-button,
 .blue-button:visited {
@@ -771,11 +771,16 @@ and will be used across all viewports.
 /*********************
 01. GENERAL STYLES
 *********************/
+html,
+body {
+  /* height: 100%; */
+
+}
 body {
   font-family: "Georgia", Cambria, Times New Roman, Times, serif;
   font-size: 100%;
   line-height: 1.5;
-  color: #565656;
+  color: #444;
 }
 /********************
 02. WORDPRESS BODY CLASSES
@@ -828,7 +833,7 @@ body {
 *********************/
 a,
 a:visited {
-  color: #f01d4f;
+  color: #c82ecf;
   /* on hover */
 
   /* on click */
@@ -840,7 +845,7 @@ a:hover,
 a:visited:hover,
 a:focus,
 a:visited:focus {
-  color: #d10e3c;
+  color: #a426a9;
 }
 a:link,
 a:visited:link {
@@ -867,7 +872,7 @@ h5,
 .h5 {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-rendering: optimizelegibility;
-  font-weight: 500;
+  font-weight: 400;
   /*
 	if you're going to use webfonts, be sure to check your weights
 	http://css-tricks.com/watch-your-font-weight/
@@ -1020,12 +1025,14 @@ and more scalable.
 }
 /* end .entry-content */
 .wp-caption {
+  max-width: 100%;
   background: #eee;
   padding: 5px;
   /* images inside wp-caption */
 
 }
 .wp-caption img {
+  max-width: 100%;
   margin-bottom: 0;
   width: 100%;
 }
