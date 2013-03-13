@@ -15,7 +15,6 @@
 	<!-- Favicon and Feed -->
 	<link rel="shortcut icon" type="image/png" href="<?php echo get_template_directory_uri(); ?>/favicon.png">
 	<link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?> Feed" href="<?php echo home_url(); ?>/feed/">
-
 	<!--  iPhone Web App Home Screen Icon -->
 	<link rel="apple-touch-icon" sizes="72x72" href="<?php echo get_template_directory_uri(); ?>/img/devices/reverie-icon-ipad.png" />
 	<link rel="apple-touch-icon" sizes="114x114" href="<?php echo get_template_directory_uri(); ?>/img/devices/reverie-icon-retina.png" />
@@ -37,47 +36,79 @@
 </head>
 
 <body <?php body_class(); ?>>
-
-<div class="contain-to-grid sticky">
-	<!-- Starting the Top-Bar -->
-	<nav class="top-bar">
-	    <ul class="title-area">
-	        <li class="name">
-	        	<h1><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-	        </li>
-			<!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
-			<li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
-	    </ul>
-	    <section class="top-bar-section">
-		    <?php
-		        wp_nav_menu( array(
-		            'theme_location' => 'primary',
-		            'container' => false,
-		            'depth' => 0,
-		            'items_wrap' => '<ul class="left">%3$s</ul>',
-		            'fallback_cb' => 'reverie_menu_fallback', // workaround to show a message to set up a menu
-		            'walker' => new reverie_walker( array(
-		                'in_top_bar' => false,
-		                'item_type' => 'li'
-		            ) ),
-		        ) );
-		    ?>
-		    <ul class="right">
-		    	<li class="divider hide-for-small"></li>
-		    	<li class="has-form"><?php get_search_form(); ?></li>
-		    </ul>
-	    </section>
-	</nav>
-	<!-- End of Top-Bar -->
+<!-- <div class="contain-to-grid sticky">
+</div> -->
+<div class="row">
+	<header role="banner">
+		<div class="small-12 columns">
+			<h1><a href="<?php bloginfo('url'); ?>" title="<?php bloginfo('name'); ?>"><?php bloginfo('name'); ?></a></h1>
+			<!-- <h4 class="subheader"><?php bloginfo('description'); ?></h4> -->
+			<hr/>
+		</div>
+	</header>
 </div>
-
-<header class="row" role="banner">
-	<div class="small-12 columns">
-		<h1><a href="<?php bloginfo('url'); ?>" title="<?php bloginfo('name'); ?>"><?php bloginfo('name'); ?></a></h1>
-		<!-- <h4 class="subheader"><?php bloginfo('description'); ?></h4> -->
-		<hr/>
+<!-- Starting the Top-Bar -->
+	<div class="row">
+		<div class="small-12 columns">
+			<nav class="top-bar">
+			    <ul class="title-area">
+			        <li class="name">
+			        	<!-- <h1><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1> -->
+			        </li>
+					<!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+					<li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+			    </ul>
+			    <section class="top-bar-section">
+				    <?php
+				        wp_nav_menu( array(
+				            'theme_location' => 'primary',
+				            'container' => false,
+				            'depth' => 0,
+				            'items_wrap' => '<ul class="left">%3$s</ul>',
+				            'fallback_cb' => 'reverie_menu_fallback', // workaround to show a message to set up a menu
+				            'walker' => new reverie_walker( array(
+				                'in_top_bar' => false,
+				                'item_type' => 'li'
+				            ) ),
+				        ) );
+				    ?>
+				    <ul class="right">
+				    	<li class="divider hide-for-small"></li>
+				    	<li class="has-form"><?php get_search_form(); ?></li>
+				    </ul>
+			    </section>
+			</nav>
+			<!-- End of Top-Bar -->
+		</div>
 	</div>
-</header>
 
 <!-- Start the main container -->
 <section class="container row" role="document">
+	<div class="small-12 columns">
+		<div class="brilliant">
+			<div class="large-4 columns">
+				<div class="caja">
+					<figure>
+						<img src="http://bd01.dev/wp-content/themes/bd01/img/spotify.jpg" alt="Spotify">
+						<figcaption><a href="#">Utiliza Spotify en cualquier país, el tutorial definitivo</a></figcaption>
+					</figure>
+				</div>
+			</div>
+		  	<div class="large-4 columns">
+				<div class="caja">
+					<figure>
+						<img src="http://bd01.dev/wp-content/themes/bd01/img/itunes.png" alt="iTunes">
+						<figcaption><a href="#">iTunes 11: Esto es una revolución, nueva interfaz e integración con Cloud</a></figcaption>
+					</figure>
+				</div> 
+		  	</div>
+		  	<div class="large-4 columns">
+				<div class="caja">
+					<figure>
+						<img src="http://bd01.dev/wp-content/themes/bd01/img/webplatform.png" alt="WebPlatform">
+						<figcaption><a href="#">WebPlatform: Grandes empresas para documentar la Web</a></figcaption>
+					</figure>
+				</div> 
+		  	</div>
+		</div>
+  	</div>

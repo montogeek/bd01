@@ -19,8 +19,8 @@ require_once('lib/clean.php'); // do all the cleaning and enqueue here
     - enqueueing scripts & styles for Sass OR CSS
     - please use either Sass OR CSS, having two enabled will ruin your weekend
 */
-require_once('lib/enqueue-sass.php'); // do all the cleaning and enqueue if you Sass to customize Reverie
-//require_once('lib/enqueue-css.php'); // to use CSS for customization, uncomment this line and comment the above Sass line
+//require_once('lib/enqueue-sass.php'); // do all the cleaning and enqueue if you Sass to customize Reverie
+require_once('lib/enqueue-css.php'); // to use CSS for customization, uncomment this line and comment the above Sass line
 /*
 3. lib/foundation.php
 	- add pagination

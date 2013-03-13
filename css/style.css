@@ -388,7 +388,7 @@ body {
   background: white;
   color: #222222;
   padding: 0;
-  font-family: 'Source Sans Pro', "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
   font-weight: normal;
   font-style: normal;
   line-height: 1;
@@ -1381,9 +1381,8 @@ p aside {
 
 /* Default header styles */
 h1, h2, h3, h4, ol.commentlist cite.fn, h5, h6 {
-  font-family: 'Arvo',"Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
-  /*font-weight: bold;*/
-  font-weight: 400;
+  font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-weight: bold;
   font-style: normal;
   color: #222222;
   text-rendering: optimizeLegibility;
