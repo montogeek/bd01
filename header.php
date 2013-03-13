@@ -12,7 +12,6 @@
 
 	<!-- Mobile viewport optimized: j.mp/bplateviewport -->
 	<meta name="viewport" content="width=device-width" />
-
 	<!-- Favicon and Feed -->
 	<link rel="shortcut icon" type="image/png" href="<?php echo get_template_directory_uri(); ?>/favicon.png">
 	<link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?> Feed" href="<?php echo home_url(); ?>/feed/">
@@ -50,23 +49,23 @@
 			<li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
 	    </ul>
 	    <section class="top-bar-section">
-	    <?php
-	        wp_nav_menu( array(
-	            'theme_location' => 'primary',
-	            'container' => false,
-	            'depth' => 0,
-	            'items_wrap' => '<ul class="left">%3$s</ul>',
-	            'fallback_cb' => 'reverie_menu_fallback', // workaround to show a message to set up a menu
-	            'walker' => new reverie_walker( array(
-	                'in_top_bar' => true,
-	                'item_type' => 'li'
-	            ) ),
-	        ) );
-	    ?>
-	    <ul class="right">
-	    	<li class="divider hide-for-small"></li>
-	    	<li class="has-form"><?php get_search_form(); ?></li>
-	    </ul>
+		    <?php
+		        wp_nav_menu( array(
+		            'theme_location' => 'primary',
+		            'container' => false,
+		            'depth' => 0,
+		            'items_wrap' => '<ul class="left">%3$s</ul>',
+		            'fallback_cb' => 'reverie_menu_fallback', // workaround to show a message to set up a menu
+		            'walker' => new reverie_walker( array(
+		                'in_top_bar' => false,
+		                'item_type' => 'li'
+		            ) ),
+		        ) );
+		    ?>
+		    <ul class="right">
+		    	<li class="divider hide-for-small"></li>
+		    	<li class="has-form"><?php get_search_form(); ?></li>
+		    </ul>
 	    </section>
 	</nav>
 	<!-- End of Top-Bar -->
@@ -75,7 +74,7 @@
 <header class="row" role="banner">
 	<div class="small-12 columns">
 		<h1><a href="<?php bloginfo('url'); ?>" title="<?php bloginfo('name'); ?>"><?php bloginfo('name'); ?></a></h1>
-		<h4 class="subheader"><?php bloginfo('description'); ?></h4>
+		<!-- <h4 class="subheader"><?php bloginfo('description'); ?></h4> -->
 		<hr/>
 	</div>
 </header>
