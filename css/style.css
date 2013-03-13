@@ -388,7 +388,7 @@ body {
   background: white;
   color: #222222;
   padding: 0;
-  font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-family: 'Lato', "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
   font-weight: normal;
   font-style: normal;
   line-height: 1;
@@ -468,7 +468,7 @@ select {
   margin-right: auto;
   margin-top: 0;
   margin-bottom: 0;
-  max-width: 62.5em;
+  max-width: 69.375em;
   *zoom: 1;
 }
 .row:before, .row:after {
@@ -1367,7 +1367,7 @@ a img {
 
 /* Default paragraph styles */
 p {
-  font-family: inherit;
+  font-family: 'Varela', sans-serif;
   font-weight: normal;
   font-size: 1em;
   line-height: 1.6;
@@ -1381,7 +1381,7 @@ p aside {
 
 /* Default header styles */
 h1, h2, h3, h4, ol.commentlist cite.fn, h5, h6 {
-  font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-family: "Source Sans Pro","Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
   font-weight: bold;
   font-style: normal;
   color: #222222;
