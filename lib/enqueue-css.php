@@ -23,8 +23,8 @@ function reverie_css_style()
 	wp_enqueue_style('reverie-normalize-stylesheet');
 	wp_enqueue_style('reverie-foundation-stylesheet');
 	wp_enqueue_style('reverie-stylesheet');
-	wp_enqueue_style('source-sans');
-	wp_enqueue_style('arvo');
+	//wp_enqueue_style('source-sans');
+	//wp_enqueue_style('arvo');
 	wp_enqueue_style('reverie-foundation-app');
 
 }

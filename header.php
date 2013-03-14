@@ -49,7 +49,7 @@
 </div>
 <!-- Starting the Top-Bar -->
 	<div class="row">
-		<div class="small-12 columns">
+		<div class="small-12">
 			<nav class="top-bar">
 			    <ul class="title-area">
 			        <li class="name">
@@ -87,26 +87,29 @@
 	<div class="small-12 columns">
 		<div class="brilliant">
 			<div class="large-4 columns">
-				<div class="caja">
+				<div class="cajita">
 					<figure>
 						<img src="http://bd01.dev/wp-content/themes/bd01/img/spotify.jpg" alt="Spotify">
 						<figcaption><a href="#">Utiliza Spotify en cualquier país, el tutorial definitivo</a></figcaption>
+						<span>Internet</span>
 					</figure>
 				</div>
 			</div>
 		  	<div class="large-4 columns">
-				<div class="caja">
+				<div class="cajita">
 					<figure>
 						<img src="http://bd01.dev/wp-content/themes/bd01/img/itunes.png" alt="iTunes">
 						<figcaption><a href="#">iTunes 11: Esto es una revolución, nueva interfaz e integración con Cloud</a></figcaption>
+						<span>Software</span>
 					</figure>
 				</div> 
 		  	</div>
 		  	<div class="large-4 columns">
-				<div class="caja">
+				<div class="cajita">
 					<figure>
 						<img src="http://bd01.dev/wp-content/themes/bd01/img/webplatform.png" alt="WebPlatform">
 						<figcaption><a href="#">WebPlatform: Grandes empresas para documentar la Web</a></figcaption>
+						<span>Web</span>
 					</figure>
 				</div> 
 		  	</div>
