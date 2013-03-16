@@ -11,10 +11,10 @@ function reverie_css_style()
 	// foundation stylesheet
 	wp_register_style( 'reverie-foundation-stylesheet', get_template_directory_uri() . '/css/foundation.css', array(), '' );	
 
-	wp_register_style( 'reverie-foundation-app', get_template_directory_uri() . '/css/app.css', array(), '' );	
 	
 	// Register the main style under root directory
 	wp_register_style( 'reverie-stylesheet', get_stylesheet_directory_uri() . '/style.css', array(), '', 'all' );
+	wp_register_style( 'reverie-foundation-app', get_template_directory_uri() . '/css/app.css', array(), '' );	
 	
 	// Google Web Fonts - Source Sans Pro - Arvo
 	wp_register_style('source-sans', 'http://fonts.googleapis.com/css?family=Source+Sans+Pro');
@@ -23,8 +23,8 @@ function reverie_css_style()
 	wp_enqueue_style('reverie-normalize-stylesheet');
 	wp_enqueue_style('reverie-foundation-stylesheet');
 	wp_enqueue_style('reverie-stylesheet');
-	//wp_enqueue_style('source-sans');
-	//wp_enqueue_style('arvo');
+	wp_enqueue_style('source-sans');
+	wp_enqueue_style('arvo');
 	wp_enqueue_style('reverie-foundation-app');
 
 }
