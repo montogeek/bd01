@@ -84,34 +84,28 @@
 
 <!-- Start the main container -->
 <section class="container row" role="document">
-	<div class="small-12 columns">
+  	<div class="small-12 columns">
 		<div class="brilliant">
-			<div class="large-4 columns">
-				<div class="cajita">
-					<figure>
-						<img src="http://bd01.dev/wp-content/themes/bd01/img/spotify.jpg" alt="Spotify">
-						<figcaption><a href="#">Utiliza Spotify en cualquier país, el tutorial definitivo</a></figcaption>
-						<span>Internet</span>
-					</figure>
-				</div>
-			</div>
-		  	<div class="large-4 columns">
-				<div class="cajita">
-					<figure>
-						<img src="http://bd01.dev/wp-content/themes/bd01/img/itunes.png" alt="iTunes">
-						<figcaption><a href="#">iTunes 11: Esto es una revolución, nueva interfaz e integración con Cloud</a></figcaption>
-						<span>Software</span>
-					</figure>
-				</div> 
-		  	</div>
-		  	<div class="large-4 columns">
-				<div class="cajita">
-					<figure>
-						<img src="http://bd01.dev/wp-content/themes/bd01/img/webplatform.png" alt="WebPlatform">
-						<figcaption><a href="#">WebPlatform: Grandes empresas para documentar la Web</a></figcaption>
-						<span>Web</span>
-					</figure>
-				</div> 
-		  	</div>
+			<?php
+				$args = array( 'posts_per_page'  => 3, 'numberposts' => 1, 'category' =>'285' );
+				$lastposts = get_posts( $args );
+				foreach($lastposts as $post) : setup_postdata($post); ?>
+					<div class="large-4 columns">
+						<div class="cajita">
+							<figure>
+								<?php the_post_thumbnail('brilliant');?>
+								<figcaption><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></figcaption>
+								<?php 
+									$categorias = get_the_category();
+									foreach ($categorias as $categoria) {
+										if($categoria->term_id != 285){
+											?><span><?php $categoria->name; ?></span><?php
+											break;
+										}
+									} ?>
+							</figure>
+						</div>		
+					</div>		
+				<?php endforeach; ?>
 		</div>
   	</div>
