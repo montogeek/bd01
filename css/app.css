@@ -15,7 +15,7 @@ body {
   background: white;
   color: #222222;
   padding: 0;
-  font-family: 'Source Sans Pro', "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-family: 'source-sans-pro', "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
   font-weight: normal;
   font-style: normal;
   line-height: 1;
@@ -1007,7 +1007,7 @@ p aside {
 
 /* Default header styles */
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Arvo',"Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-family: 'museo-slab',"Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
   /*font-weight: bold;*/
   font-weight: 400;
   font-style: normal;
@@ -4174,24 +4174,36 @@ table tfoot tr td {
 }
 
 /* CSS ByteDesk */
+
+.brilliant{
+  display: block;
+  margin: 20px 0;
+}
+
+
 .cajita{
   box-shadow: 1px 1px 2px 0 #D0D0D0;
 }
 
-figure span{
-  display: inline-block;
-  line-height: 16px;
-  margin: 0 0 10px 10px;
-  width: 100%;
+.cajita:hover{
+  background: rgba(2, 136, 204, 0.8);
+  border: 1px solid #0288CC;
+  box-shadow: 0 0 8px #0288CC;
+  margin: -1px;
 }
+
+.cajita:hover span{
+  color:white;
+}
+
 .cajita figcaption{
-  background-color: white;
+  background-color: #f7f7f7;
   bottom: 30%;
   display: block;
-  font-family: 'Arvo', "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-family: 'museo-slab', "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
   font-size: 1.5em;
   font-style: normal;
-  font-weight: normal;
+  font-weight: 300;
   margin: 0 0 10px 0;
   padding: 10px 0 10px 10px;
   position: absolute;
@@ -4200,29 +4212,31 @@ figure span{
   transition: all 0.3s ease;
   width: 92%;
 }
-
 .cajita:hover figcaption{
   color: #3498DB;
   padding: 15px 0 15px 10px;
   opacity: 1;
+}
+.cajita:hover a{
+  color: #3498DB;
+  text-shadow: 1px 1px 1px #7cbde8;
 }
 
 .cajita:hover img{
   -webkit-filter: grayscale(0.8) blur(2px);
 }
 
-.brilliant{
+figure span{
   display: inline-block;
-  margin: 20px 0 20px 0;
-}
-
-figure img{
-  height: 190px;
-  overflow: hidden;
+  line-height: 16px;
+  margin: 0 0 10px 10px;
   width: 100%;
 }
 
 figure img{
+  background-color: white;
+  height: 190px;
+  overflow: hidden;
   width: 100%;
   transition: all 0.6s ease;
 }
@@ -4239,3 +4253,25 @@ figure img{
   font-size:1em;
   font-weight: 400;
 }
+
+/* Flat UI Colors */
+/* #1ABC9C TURQUOISE */
+/* #16A085 GREEN SEA */
+/* #2ECC71 EMERLAND */
+/* #27AE60 NEPHRITIS */
+/* #3498DB PETER RIVER */
+/* #2980B9 BELIZE HOLE */
+/* #9B59B6 AMETHYST */
+/* #8E44AD WISTERIA */
+/* #34495E WET ASPHALT */
+/* #2C3E50 MIDNIGHT BLUE */
+/* #F1C40F SUN FLOWER */
+/* #F39C12 ORANGE */
+/* #E67E22 CARROT */
+/* #D35400 PUMPKIN */
+/* #E74C3C ALIZARIN */
+/* #C0392B POMEGRANATE */
+/* #ECF0F1 CLOUDS */
+/* #BDC3C7 SILVER */
+/* #95A5A6 CONCRETE */
+/* #7F8C8D ASBESTOS */

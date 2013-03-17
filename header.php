@@ -32,7 +32,8 @@
 	<link rel="apple-touch-startup-image" href="<?php echo get_template_directory_uri(); ?>/img/devices/reverie-load.png" media="screen and (max-device-width: 320px)" />
 
 <?php wp_head(); ?>
-
+	<script type="text/javascript" src="//use.typekit.net/fdg3uxj.js"></script>
+	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 </head>
 
 <body <?php body_class(); ?>>
@@ -98,11 +99,12 @@
 								<?php 
 									$categorias = get_the_category();
 									foreach ($categorias as $categoria) {
-										if($categoria->term_id != 285){
-											?><span><?php $categoria->name; ?></span><?php
-											break;
-										}
-									} ?>
+											if(strcasecmp($categoria->cat_name,"Brilliant") > 0){
+												echo "<span>".$categoria->cat_name."</span>";
+												break;
+											}
+									}
+								?>
 							</figure>
 						</div>		
 					</div>		
