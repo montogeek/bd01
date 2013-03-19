@@ -4226,27 +4226,31 @@ table tfoot tr td {
   -webkit-filter: grayscale(0.8) blur(2px);
 }
 
-figure span{
+.cajita figure span{
   display: inline-block;
   line-height: 16px;
   margin: 0 0 10px 10px;
   width: 100%;
 }
 
-figure img{
+.cajita figure img{
   background-color: white;
   height: 190px;
   overflow: hidden;
   width: 100%;
-  transition: all 0.6s ease;
+  transition: all 1s ease;
 }
 
 .top-bar-section ul li > a{
-  color: #000;
+  color: #3498DB;
 }
 
 .top-bar-section ul li.active a{
   background: #BDC3C7;
+}
+
+.top-bar-section ul li{
+  border-bottom: 1px 1px 2px #eee;
 }
 
 .top-bar-section ul li > a {
