@@ -38,17 +38,6 @@
 
 <body <?php body_class(); ?>>
 <!-- <div class="contain-to-grid sticky">
-</div> -->
-<div class="row">
-	<header role="banner">
-		<div class="small-12 columns">
-			<h1><a href="<?php bloginfo('url'); ?>" title="<?php bloginfo('name'); ?>"><?php bloginfo('name'); ?></a></h1>
-			<!-- <h4 class="subheader"><?php bloginfo('description'); ?></h4> -->
-			<hr/>
-		</div>
-	</header>
-</div>
-<!-- Starting the Top-Bar -->
 	<div class="row">
 		<div class="small-12">
 			<nav class="top-bar">
@@ -82,6 +71,18 @@
 			<!-- End of Top-Bar -->
 		</div>
 	</div>
+</div> -->
+<div class="row">
+	<header role="banner">
+		<div class="small-12 columns">
+			<h1><a href="<?php bloginfo('url'); ?>" title="<?php bloginfo('name'); ?>"><?php bloginfo('name'); ?></a></h1>
+			<!-- <h4 class="subheader"><?php bloginfo('description'); ?></h4> -->
+			<hr/>
+		</div>
+	</header>
+</div>
+<!-- Starting the Top-Bar -->
+	
 
 <!-- Start the main container -->
 <section class="container row" role="document">
