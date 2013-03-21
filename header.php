@@ -38,39 +38,6 @@
 
 <body <?php body_class(); ?>>
 <!-- <div class="contain-to-grid sticky">
-	<div class="row">
-		<div class="small-12">
-			<nav class="top-bar">
-			    <ul class="title-area">
-			        <li class="name">
-			        	<!-- <h1><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1> -->
-			        </li>
-					<!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
-					<li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
-			    </ul>
-			    <section class="top-bar-section">
-				    <?php
-				        wp_nav_menu( array(
-				            'theme_location' => 'primary',
-				            'container' => false,
-				            'depth' => 0,
-				            'items_wrap' => '<ul class="left">%3$s</ul>',
-				            'fallback_cb' => 'reverie_menu_fallback', // workaround to show a message to set up a menu
-				            'walker' => new reverie_walker( array(
-				                'in_top_bar' => false,
-				                'item_type' => 'li'
-				            ) ),
-				        ) );
-				    ?>
-				    <ul class="right">
-				    	<li class="divider hide-for-small"></li>
-				    	<li class="has-form"><?php get_search_form(); ?></li>
-				    </ul>
-			    </section>
-			</nav>
-			<!-- End of Top-Bar -->
-		</div>
-	</div>
 </div> -->
 <div class="row">
 	<header role="banner">
@@ -82,12 +49,44 @@
 	</header>
 </div>
 <!-- Starting the Top-Bar -->
-	
+<div class="row">
+	<div class="small-12">
+		<nav class="top-bar">
+		    <ul class="title-area">
+		        <li class="name">
+		        	<!-- <h1><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1> -->
+		        </li>
+				<!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+				<li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+		    </ul>
+		    <section class="top-bar-section">
+			    <?php
+			        wp_nav_menu( array(
+			            'theme_location' => 'primary',
+			            'container' => false,
+			            'depth' => 0,
+			            'items_wrap' => '<ul class="left">%3$s</ul>',
+			            'fallback_cb' => 'reverie_menu_fallback', // workaround to show a message to set up a menu
+			            'walker' => new reverie_walker( array(
+			                'in_top_bar' => false,
+			                'item_type' => 'li'
+			            ) ),
+			        ) );
+			    ?>
+			    <ul class="right">
+			    	<!--<li class="divider hide-for-small"></li>-->
+			    	<li class="has-form"><?php get_search_form(); ?></li>
+			    </ul>
+		    </section>
+		</nav>
+		<!-- End of Top-Bar -->
+	</div>
+</div>
 
 <!-- Start the main container -->
 <section class="container row" role="document">
   	<div class="small-12 columns">
-		<div class="brilliant">
+		<div class="brilliant hide-for-small">
 			<?php
 				$args = array( 'posts_per_page'  => 3, 'numberposts' => 1, 'category' =>'285' );
 				$lastposts = get_posts( $args );
@@ -112,3 +111,23 @@
 				<?php endforeach; ?>
 		</div>
   	</div>
+  	<section class="container row">
+  		<div class="large-12 columns">
+  			<div class="large-8 columns">
+	  			<div class="first">
+	  				<p>Libros de Papel o Electrónicos, cual prefieres?</p>
+	  			</div>
+	  			<div class="second">
+	  				<p>Libros de Papel o Electrónicos, cual prefieres?</p>
+	  			</div>
+	  			<div class="third">
+	  				<p>Libros de Papel o Electrónicos, cual prefieres?</p>
+	  			</div>
+  			</div>
+  			<div class="large-4 columns">
+  				<div class="ad">
+  					.....
+	  			</div>
+  			</div>
+  		</div>
+  	</section>

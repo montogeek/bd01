@@ -15,7 +15,7 @@ body {
   background: white;
   color: #222222;
   padding: 0;
-  font-family: 'source-sans-pro', "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
   font-weight: normal;
   font-style: normal;
   line-height: 1;
@@ -980,7 +980,7 @@ td {
 
 /* Default Link Styles */
 a {
-  color: #3498DB;
+  color: #2ba6cb;
   text-decoration: none;
   line-height: inherit;
 }
@@ -1007,9 +1007,8 @@ p aside {
 
 /* Default header styles */
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'museo-slab',"Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
-  /*font-weight: bold;*/
-  font-weight: 400;
+  font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-weight: bold;
   font-style: normal;
   color: #222222;
   text-rendering: optimizeLegibility;
@@ -2365,7 +2364,7 @@ form.custom .custom.disabled {
   height: 45px;
   line-height: 45px;
   position: relative;
-  background: #ECF0F1;
+  background: #111111;
 }
 .top-bar ul {
   margin-bottom: 0;
@@ -2582,7 +2581,7 @@ form.custom .custom.disabled {
 
 @media only screen and (min-width: 58.75em) {
   .top-bar {
-    background: #ECF0F1;
+    background: #111111;
     *zoom: 1;
     overflow: visible;
   }
@@ -2635,10 +2634,10 @@ form.custom .custom.disabled {
   .top-bar-section li a:not(.button) {
     padding: 0 15px;
     line-height: 45px;
-    background: #ECF0F1;
+    background: #111111;
   }
   .top-bar-section li a:not(.button):hover {
-    background: #BDC3C7;
+    background: #2b2b2b;
   }
   .top-bar-section .has-dropdown > a {
     padding-right: 35px !important;
@@ -2689,14 +2688,14 @@ form.custom .custom.disabled {
   .top-bar-section > ul > .divider {
     border-bottom: none;
     border-top: none;
-    border-right: solid 1px #BDC3C7;
-    border-left: solid 1px #BDC3C7;
+    border-right: solid 1px #2b2b2b;
+    border-left: solid 1px black;
     clear: none;
     height: 45px;
     width: 0px;
   }
   .top-bar-section .has-form {
-    background: #ECF0F1;
+    background: #111111;
     padding: 0 15px;
     height: 45px;
   }
@@ -4173,6 +4172,8 @@ table tfoot tr td {
   max-width: 800px;
 }
 
+
+
 /* CSS ByteDesk */
 
 .brilliant{
@@ -4241,8 +4242,12 @@ table tfoot tr td {
   transition: all 1s ease;
 }
 
+.top-bar{
+  background: #FFF;
+  box-shadow: 0 0 4px #95A5A6;
+}
 .top-bar-section ul li > a{
-  color: #3498DB;
+  color: #000;
 }
 
 .top-bar-section ul li.active a{
@@ -4258,13 +4263,35 @@ table tfoot tr td {
   font-weight: 400;
 }
 
+.top-bar-section li a:not(button){
+  background:#FFF !important;
+}
+
+.top-bar-section li a:not(button):hover{
+  background:#ECF0F1 !important;
+  border-bottom-color: rgba(2, 136, 204, 0.8);
+  border-bottom-style: solid;
+  border-bottom-width: medium;
+  margin-bottom:-4px;
+}
+
+.top-bar-section ul{
+  background: transparent !important;
+}
+
+.top-bar-section .has-form{
+  background: transparent !important;
+}
+a{
+  color: #3498DB;
+}
 /* Flat UI Colors */
 /* #1ABC9C TURQUOISE */
 /* #16A085 GREEN SEA */
 /* #2ECC71 EMERLAND */
 /* #27AE60 NEPHRITIS */
 /* #3498DB PETER RIVER */
-/* #2980B9 BELIZE HOLE */
+/* #2981B9 BELIZE HOLE */
 /* #9B59B6 AMETHYST */
 /* #8E44AD WISTERIA */
 /* #34495E WET ASPHALT */
