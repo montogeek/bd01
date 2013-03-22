@@ -4285,6 +4285,69 @@ table tfoot tr td {
 a{
   color: #3498DB;
 }
+
+#social-sidebar{
+  border-radius: 5px;
+  text-align: center;
+  padding: 5px;
+}
+
+#social-sidebar #searchform {
+  float:right;
+  margin:0px 3.4% 0 3px;
+}
+#social-sidebar input#s {
+  width: 0;
+  padding:8px 16px;
+  margin-right:0;
+  background:#dedede url(../img/search.png) right center no-repeat;
+  background:rgba(0, 0, 0, .1) url(../img/search.png) right center no-repeat;
+  border:none;
+  border-radius:24px;
+  box-shadow: none;
+  color:#999;
+  font-size:12px;
+  font-family:"Open Sans", sans-serif;
+  text-indent: 16px;
+  -moz-transition: width .25s ease, margin .25s ease;
+  -webkit-transition: width .25s ease, margin .25s ease;
+  -o-transition: width .25s ease, margin .25s ease;
+  -ms-transition: width .25s ease, margin .25s ease;
+  transition: width .25s ease, margin .25s ease;
+}
+
+#social-sidebar input#s:focus {
+  width:150px;
+  background:#ececec url(../img/search.png) right center no-repeat;
+  box-shadow:inset 1px 1px 5px 1px rgba(0, 0, 0, .1);
+  color:#333;
+  text-indent: 0;
+}
+
+input#searchsubmit {
+  display:none;
+  width:30px;
+  padding:2px;
+  margin-right:10px;
+  background:#a8a8a8;
+  background:-moz-linear-gradient(#CCC,#999);
+  background:-webkit-linear-gradient(#CCC,#999);
+  background:-o-linear-gradient(#CCC,#999);
+  background:-ms-linear-gradient(#CCC,#999);
+  background:linear-gradient(#CCC,#999);
+  border:#999 1px solid;
+  color:#333;
+  text-align:center;
+}
+.searchfield{
+  font-size: 13px;
+  padding: 10px 28px 10px 6px;
+  width: 240px;
+  border:1px solid #E7E7E7;
+  font:inherit;
+  color: #888;
+  background: url(../img/magnify.png) no-repeat 96% 50%;
+}
 /* Flat UI Colors */
 /* #1ABC9C TURQUOISE */
 /* #16A085 GREEN SEA */

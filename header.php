@@ -30,7 +30,32 @@
 	<link rel="apple-touch-startup-image" href="<?php echo get_template_directory_uri(); ?>/img/devices/reverie-load-ipad-portrait.png" media="screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait)" />
 	<!-- Startup Image iPhone (320x460) -->
 	<link rel="apple-touch-startup-image" href="<?php echo get_template_directory_uri(); ?>/img/devices/reverie-load.png" media="screen and (max-device-width: 320px)" />
+	<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@bytedesk">
 
+	<?php if(is_single()): ?>
+		<meta name="twitter:creator" content="<?php $getid = $post->post_author; switch ($getid) {
+			case '4':
+				echo "@moscoquera";
+				break;
+			case '2':
+				echo "@juanmanuelots";
+				break;
+			default:
+				echo "@montogeek";
+				break;
+		} ?>">
+		<meta name="twitter:url" content="<?php the_permalink(); ?>">
+		<meta name="twitter:title" content="<?php the_title(); ?>">
+		<meta name="twitter:description" content="<?php excepto(); ?>">
+		<meta name="twitter:image" content="<?php $image = wp_get_attachment_thumb_url(get_post_thumbnail_id($post->ID)); if($image == FALSE) {echo "http://bytedesk.com/wp-content/themes/bytedesk/images/no-image-half-landscape.png";} else echo $image; ?>">
+	<?php endif; ?>
+	<?php if(is_front_page()): ?>
+		<meta name="twitter:url" content="<?php bloginfo('url'); ?>">
+		<meta name="twitter:title" content="<?php bloginfo('name'); ?>">
+		<meta name="twitter:description" content="<?php bloginfo('description'); ?>">
+		<meta name="twitter:image" content="http://bytedesk.com/wp-content/uploads/2012/10/image-thumbnail-100.png">
+	<?php endif; ?>
 <?php wp_head(); ?>
 	<script type="text/javascript" src="//use.typekit.net/fdg3uxj.js"></script>
 	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
@@ -42,7 +67,10 @@
 <div class="row">
 	<header role="banner">
 		<div class="small-12 columns">
-			<h1><a href="<?php bloginfo('url'); ?>" title="<?php bloginfo('name'); ?>"><?php bloginfo('name'); ?></a></h1>
+			<h1>
+				<img src="<?php echo get_template_directory_uri(); ?>/img/logo360x90.png" alt="ByteDesk">
+				<!--<a href="<?php bloginfo('url'); ?>" title="<?php bloginfo('name'); ?>"><?php bloginfo('name'); ?></a>-->
+			</h1>
 			<!-- <h4 class="subheader"><?php bloginfo('description'); ?></h4> -->
 			<hr/>
 		</div>
@@ -55,6 +83,7 @@
 		    <ul class="title-area">
 		        <li class="name">
 		        	<!-- <h1><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1> -->
+		        	<img src="<?php echo get_template_directory_uri(); ?>/img/logo360x90.png" alt="ByteDesk" style="width: 150px">
 		        </li>
 				<!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
 				<li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
@@ -65,7 +94,7 @@
 			            'theme_location' => 'primary',
 			            'container' => false,
 			            'depth' => 0,
-			            'items_wrap' => '<ul class="left">%3$s</ul>',
+			            'items_wrap' => '<ul class="right">%3$s</ul>',
 			            'fallback_cb' => 'reverie_menu_fallback', // workaround to show a message to set up a menu
 			            'walker' => new reverie_walker( array(
 			                'in_top_bar' => false,
@@ -111,7 +140,7 @@
 				<?php endforeach; ?>
 		</div>
   	</div>
-  	<section class="container row">
+  	<!-- <section class="container row">
   		<div class="large-12 columns">
   			<div class="large-8 columns">
 	  			<div class="first">
@@ -130,4 +159,4 @@
 	  			</div>
   			</div>
   		</div>
-  	</section>
+  	</section> -->

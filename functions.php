@@ -97,4 +97,12 @@ function reverie_entry_meta() {
 }
 
 add_image_size('brilliant',330,190,true);
+function excepto(){
+	global $post;
+	$meta = strip_tags($post->post_content);
+	$meta = strip_shortcodes($meta);
+	$meta = str_replace(array("\r\n", "\r", "\n", "\t", '  ', '    ', '    ','"'), ' ', $meta);
+	$meta = substr($meta, 0, 200);
+	echo $meta;
+}
 ?>

@@ -1,4 +1,4 @@
-<?php get_header(); ?>
+er<?php get_header(); ?>
 
 <!-- Row for main content area -->
 	<div class="small-12 large-9 columns" role="main">
