@@ -15,7 +15,8 @@ body {
   background: white;
   color: #222222;
   padding: 0;
-  font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-family: "source-sans-pro", "Helvetica", Helvetica, Arial, sans-serif;
+  /*font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;*/
   font-weight: normal;
   font-style: normal;
   line-height: 1;
@@ -1007,7 +1008,7 @@ p aside {
 
 /* Default header styles */
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  /* font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif; */
   font-weight: bold;
   font-style: normal;
   color: #222222;
@@ -4186,15 +4187,28 @@ table tfoot tr td {
   box-shadow: 1px 1px 2px 0 #D0D0D0;
 }
 
-.cajita:hover{
+/*.cajita:hover{
   background: rgba(2, 136, 204, 0.8);
   border: 1px solid #0288CC;
   box-shadow: 0 0 8px #0288CC;
   margin: -1px;
-}
+}*/
 
 .cajita:hover span{
   color:white;
+}
+
+#list div:nth-of-type(odd):hover div.cajita{
+  background: rgba(247, 35, 24, 0.8);
+  border: 1px solid #EB322D;
+  box-shadow: 0 0 8px #EB322D;
+  margin: -1px;
+}
+#list div:nth-of-type(even):hover div.cajita{
+  background: rgba(2, 136, 203, 0.8);
+  border: 1px solid #3498DB;
+  box-shadow: 0 0 8px #3498DB;
+  margin: -1px;
 }
 
 .cajita figcaption{
@@ -4269,10 +4283,14 @@ table tfoot tr td {
 
 .top-bar-section li a:not(button):hover{
   background:#ECF0F1 !important;
-  border-bottom-color: rgba(2, 136, 204, 0.8);
+  border-bottom-color: #3498DB;/*rgba(2, 136, 204, 0.8);*/
   border-bottom-style: solid;
   border-bottom-width: medium;
   margin-bottom:-4px;
+}
+
+.top-bar-section li:nth-child(2n+1) a:not(button):hover{
+  border-bottom-color: #EB322D;
 }
 
 .top-bar-section ul{
@@ -4306,7 +4324,7 @@ a{
   border-radius:24px;
   box-shadow: none;
   color:#999;
-  font-size:12px;
+  font-size:12px;2
   font-family:"Open Sans", sans-serif;
   text-indent: 16px;
   -moz-transition: width .25s ease, margin .25s ease;
@@ -4348,6 +4366,14 @@ input#searchsubmit {
   color: #888;
   background: url(../img/magnify.png) no-repeat 96% 50%;
 }
+
+/* ByteDesk Colors*/
+/* #EB322D Meloncholy */
+/* #F1C40F Tuesday Yellow*/
+/* #F45A24 Variety of choices*/
+/* #3498DB Cyanide*/
+/* #2ECC71 Emerland*/
+
 /* Flat UI Colors */
 /* #1ABC9C TURQUOISE */
 /* #16A085 GREEN SEA */

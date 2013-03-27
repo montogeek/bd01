@@ -56,9 +56,9 @@
 		<meta name="twitter:description" content="<?php bloginfo('description'); ?>">
 		<meta name="twitter:image" content="http://bytedesk.com/wp-content/uploads/2012/10/image-thumbnail-100.png">
 	<?php endif; ?>
-<?php wp_head(); ?>
 	<script type="text/javascript" src="//use.typekit.net/fdg3uxj.js"></script>
 	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+	<?php wp_head(); ?>
 </head>
 
 <body <?php body_class(); ?>>
@@ -115,7 +115,7 @@
 <!-- Start the main container -->
 <section class="container row" role="document">
   	<div class="small-12 columns">
-		<div class="brilliant hide-for-small">
+		<div id="list" class="brilliant hide-for-small">
 			<?php
 				$args = array( 'posts_per_page'  => 3, 'numberposts' => 1, 'category' =>'285' );
 				$lastposts = get_posts( $args );
