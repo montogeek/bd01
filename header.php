@@ -68,7 +68,7 @@
 	<header role="banner">
 		<div class="small-12 columns">
 			<h1>
-				<img src="<?php echo get_template_directory_uri(); ?>/img/logo360x90.png" alt="ByteDesk">
+				<a href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/logo360x90.png" alt="ByteDesk"></a>
 				<!--<a href="<?php bloginfo('url'); ?>" title="<?php bloginfo('name'); ?>"><?php bloginfo('name'); ?></a>-->
 			</h1>
 			<!-- <h4 class="subheader"><?php bloginfo('description'); ?></h4> -->

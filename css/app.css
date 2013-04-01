@@ -4386,15 +4386,15 @@ input#searchsubmit {
   height: 2.375em;
   text-indent: -9999em;
   width: 9.375em;
-  -webkit-transition: opacity 0.2s ease, width 0s linear, height 0s linear;
-  -webkit-transition-delay: 0s, 0.25s, 0.25s;
+  /*-webkit-transition: opacity 0.2s ease, width 0s linear, height 0s linear;
+  -webkit-transition-delay: 0s, 0.25s, 0.25s;*/
   transition: opacity 0.2s ease, width 0s linear 0.25s, height 0s linear 0.25s;
 }
 
 ul.left{
   margin-left:-9.375em;
-  -webkit-transition: margin-left 0.125s ease;
-  -webkit-transition-delay: 2s;
+  /*-webkit-transition: margin-left 0.125s ease;
+  -webkit-transition-delay: 2s;*/
   transition: margin-left 0.125s ease;
 }
 
