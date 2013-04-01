@@ -127,14 +127,18 @@ function reverie_scripts_and_styles() {
 
     // adding Foundation scripts file in the footer
     wp_register_script( 'reverie-js', get_template_directory_uri() . '/js/foundation.min.js', array( 'jquery' ), '', true );
+
+    //JS Personal
+    wp_register_script('func',get_template_directory_uri().'/js/func.js',array('jquery'),'',true);
     
     if ($is_IE) {
        wp_register_script ( 'html5shiv', "http://html5shiv.googlecode.com/svn/trunk/html5.js" , false, true);
     }
 
-    // enqueue styles and scripts
     wp_enqueue_script( 'reverie-modernizr' );
+    // enqueue styles and scripts
     wp_enqueue_style('reverie-ie-only');
+    wp_enqueue_script('func');
     /*
     I recommend using a plugin to call jQuery
     using the google cdn. That way it stays cached

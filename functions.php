@@ -105,4 +105,3 @@ function excepto(){
 	$meta = substr($meta, 0, 200);
 	echo $meta;
 }
-?>

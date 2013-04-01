@@ -4259,6 +4259,9 @@ table tfoot tr td {
 .top-bar{
   background: #FFF;
   box-shadow: 0 0 4px #95A5A6;
+  height: 5.625em;
+  padding-left: 8.125em;
+  padding-top: 1.3em;
 }
 .top-bar-section ul li > a{
   color: #000;
@@ -4270,6 +4273,7 @@ table tfoot tr td {
 
 .top-bar-section ul li{
   border-bottom: 1px 1px 2px #eee;
+  margin-left: 1em;
 }
 
 .top-bar-section ul li > a {
@@ -4281,15 +4285,15 @@ table tfoot tr td {
   background:#FFF !important;
 }
 
-.top-bar-section li a:not(button):hover{
-  background:#ECF0F1 !important;
+.top-bar-section li:hover/* a:not(button):hover*/{
+  /*background:#ECF0F1 !important;*/
   border-bottom-color: #3498DB;/*rgba(2, 136, 204, 0.8);*/
   border-bottom-style: solid;
   border-bottom-width: medium;
   margin-bottom:-4px;
 }
 
-.top-bar-section li:nth-child(2n+1) a:not(button):hover{
+.top-bar-section li:nth-child(2n+1):hover /*a:not(button):hover*/{
   border-bottom-color: #EB322D;
 }
 
@@ -4300,6 +4304,11 @@ table tfoot tr td {
 .top-bar-section .has-form{
   background: transparent !important;
 }
+
+.top-bar-section li a:not(.button){
+  font-size: 18px;
+}
+
 a{
   color: #3498DB;
 }
@@ -4316,11 +4325,12 @@ a{
 }
 #social-sidebar input#s {
   width: 0;
-  padding:8px 16px;
+  padding:16px;
   margin-right:0;
   background:#dedede url(../img/search.png) right center no-repeat;
   background:rgba(0, 0, 0, .1) url(../img/search.png) right center no-repeat;
-  border:none;
+  background-size: 100%;
+  border: none;
   border-radius:24px;
   box-shadow: none;
   color:#999;
@@ -4337,6 +4347,7 @@ a{
 #social-sidebar input#s:focus {
   width:150px;
   background:#ececec url(../img/search.png) right center no-repeat;
+  background-size: 25%;
   box-shadow:inset 1px 1px 5px 1px rgba(0, 0, 0, .1);
   color:#333;
   text-indent: 0;
@@ -4366,6 +4377,38 @@ input#searchsubmit {
   color: #888;
   background: url(../img/magnify.png) no-repeat 96% 50%;
 }
+
+.logo{
+  background: url('../img/logo360x90.png') no-repeat left center;
+  background-size: 100%;
+  display: block;
+  opacity: 0;
+  height: 2.375em;
+  text-indent: -9999em;
+  width: 9.375em;
+  -webkit-transition: opacity 0.2s ease, width 0s linear, height 0s linear;
+  -webkit-transition-delay: 0s, 0.25s, 0.25s;
+  transition: opacity 0.2s ease, width 0s linear 0.25s, height 0s linear 0.25s;
+}
+
+ul.left{
+  margin-left:-9.375em;
+  -webkit-transition: margin-left 0.125s ease;
+  -webkit-transition-delay: 2s;
+  transition: margin-left 0.125s ease;
+}
+
+ul.right{
+  margin-right:0em;
+  margin-top: -10px;
+  -webkit-transition: margin-right 0.125s ease;
+  -webkit-transition-delay: 2s;
+  transition: margin-right 0.125s ease;
+}
+.top-bar-section .has-form{
+  border-bottom-color: transparent !important;
+}
+
 
 /* ByteDesk Colors*/
 /* #EB322D Meloncholy */
