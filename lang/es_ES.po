@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: bd01\n"
 "POT-Creation-Date: 2013-03-22 14:45-0500\n"
-"PO-Revision-Date: 2013-04-01 09:46-0500\n"
+"PO-Revision-Date: 2013-04-01 14:27-0500\n"
 "Last-Translator: Fernando Montoya <montogeek@gmail.com>\n"
 "Language-Team: MontoGeek <montogeek@gmail.com>\n"
 "MIME-Version: 1.0\n"
@@ -26,7 +26,7 @@ msgstr "Revisa tu escritura"
 #. Text in echo
 #: 404.php:18
 msgid "Click the <a href=\"javascript:history.back()\">Back</a> button"
-msgstr ""
+msgstr "Haz click <a href=\"javascript:history.back()\">aquí</a> para regresar"
 
 #. Text in echo
 #: 404.php:8
@@ -49,6 +49,8 @@ msgid ""
 "The page you are looking for might have been removed, had its name changed, "
 "or is temporarily unavailable."
 msgstr ""
+"La página que estás buscando pudo haber sido eliminada, su nombre cambió o "
+"temporalmente no disponible."
 
 #. Text in function
 #: archive.php:21
@@ -78,7 +80,7 @@ msgstr "% Opiniones de"
 #. Text in function
 #: comments.php:9
 msgid "%1$s"
-msgstr ""
+msgstr "%1$s"
 
 #. Text in function
 #: comments.php:53
@@ -93,7 +95,7 @@ msgstr "(Editar)"
 #. Text in function
 #: comments.php:8
 msgid "<cite class=\"fn\">%s</cite>"
-msgstr ""
+msgstr "<cite class=\"fn\">%s</cite>"
 
 #. Text in echo
 #: comments.php:93
@@ -133,7 +135,7 @@ msgstr "Desconectarse"
 #. Text in function
 #: comments.php:77
 msgid "Logged in as <a href=\"%s/wp-admin/profile.php\">%s</a>."
-msgstr ""
+msgstr "Conectado como <a href=\"%s/wp-admin/profile.php\">%s</a>."
 
 #. Text in echo
 #: comments.php:80
